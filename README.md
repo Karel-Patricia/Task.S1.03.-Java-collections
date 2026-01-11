@@ -14,12 +14,12 @@ Crea una clase llamada Monthcon un atributo name, que almacene el nombre del mes
 Convierte después el ArrayListen uno HashSety verifica que no se permiten duplicados.
 Por último, recorre la colección con un bucle fory con un Iterator.
 
-### Ejercicio 2 – ListIterator
+### Ejercicio 2 – ListIterator
 Crea y rellena una List<Integer>.
 Crea una segunda lista e inserta los mismos elementos pero en orden inverso.
 Use uno ListIterator para leer los elementos de la primera y añadirlos a la segunda.
 
-### Ejercicio 3 – Capital Game
+### Ejercicio 3 – Capital Game
 A partir del archivo  countries.txt (consulta el apartado de recursos), que contiene parejas de país y capital separadas por comas, el programa debe leer todos los datos y almacenarlos en un  HashMap<String, String>, donde la clave es el nombre del país y el valor, su capital.
 
 Una vez cargados los datos, el programa pedirá el nombre del usuario y empezará el juego.
