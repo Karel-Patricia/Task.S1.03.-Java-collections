@@ -2,6 +2,8 @@ package main;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -56,11 +58,14 @@ public class Main {
         System.out.println("Juego terminado.");
         System.out.println("Tu puntuación es : " + score + "/10");
 
-        
-
-
-
+        try {
+            FileWriter writer = new FileWriter("classificacio.txt", true);
+            writer.write(userName + " - " + score + "\n");
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Error " + e.getMessage());
         }
 
+    }
 
 }
