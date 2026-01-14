@@ -38,6 +38,10 @@ public class Main {
         List<String> countryNames = new ArrayList<>(cities.keySet());
         Collections.shuffle(countryNames);
 
+        int score = 0;
+
+        
+
         //System.out.println(countryNames);
 
         //for(int i = 0; i < 10; i++){
