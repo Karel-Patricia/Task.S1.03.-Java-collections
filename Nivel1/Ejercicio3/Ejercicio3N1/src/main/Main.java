@@ -31,6 +31,7 @@ public class Main {
 
         //System.out.println(cities);
         String userName = "";
+        String userAnswer = "";
 
         System.out.println("Escribe tu nombre");
         userName = sc.nextLine();
@@ -40,13 +41,17 @@ public class Main {
 
         int score = 0;
 
-        
+        for(int i = 0; i < 10 && i < countryNames.size(); i++){
+            String country = countryNames.get(i);
+            String correctCapital = cities.get(country);
 
-        //System.out.println(countryNames);
+            System.out.println("Capital de " + country +  ": ");
+            userAnswer = sc.nextLine();
 
-        //for(int i = 0; i < 10; i++){
-
-        //}
+            if(userAnswer.equalsIgnoreCase(correctCapital)){
+                score++;
+            }
+        }
 
 
 
