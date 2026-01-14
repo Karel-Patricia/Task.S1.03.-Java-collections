@@ -29,7 +29,6 @@ public class Main {
             System.out.println("Error archivo no encontrado -> " + e.getMessage());
         }
 
-        //System.out.println(cities);
         String userName = "";
         String userAnswer = "";
 
@@ -53,6 +52,11 @@ public class Main {
             }
         }
 
+        System.out.println();
+        System.out.println("Juego terminado.");
+        System.out.println("Tu puntuación es : " + score + "/10");
+
+        
 
 
 
