@@ -2,10 +2,7 @@ package main;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     static void main(String[] args) {
@@ -32,7 +29,21 @@ public class Main {
             System.out.println("Error archivo no encontrado -> " + e.getMessage());
         }
 
-        System.out.println(cities);
+        //System.out.println(cities);
+        String userName = "";
+
+        System.out.println("Escribe tu nombre");
+        userName = sc.nextLine();
+
+        List<String> countryNames = new ArrayList<>(cities.keySet());
+        Collections.shuffle(countryNames);
+
+        //System.out.println(countryNames);
+
+        //for(int i = 0; i < 10; i++){
+
+        //}
+
 
 
 
