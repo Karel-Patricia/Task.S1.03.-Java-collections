@@ -31,8 +31,6 @@ public class Month {
 
     @Override
     public String toString() {
-        return "Month{" +
-                "name='" + name + '\'' +
-                '}';
+        return "Mes='" + name + '\'';
     }
 }

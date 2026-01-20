@@ -22,7 +22,8 @@ public class Main {
 
         months.add(7, new Month("Agosto"));
 
-        System.out.println("ArrayList: \nMeses del año, incluido Agosto en la posición correcta: ");
+        System.out.println("ArrayList: Mantiene el orden de inserción");
+        System.out.println("Meses del año, incluido Agosto en la posición correcta: ");
         for (Month month : months){
             System.out.println(month);
         }
@@ -31,7 +32,8 @@ public class Main {
 
         monthSet.add(new Month("Enero"));
 
-        System.out.println("\nHashSet: \nNo mantiene el orden de inserción \nNo duplica si se implementa equals() y hasCode():");
+        System.out.println("\nHashSet: \nNo mantiene el orden de inserción");
+        System.out.println("No duplica si equals() y hashCode() están implementados correctamente:");
         for (Month month : monthSet) {
             System.out.println(month);
         }
