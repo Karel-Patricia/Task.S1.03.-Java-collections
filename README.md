@@ -29,11 +29,11 @@ El funcionamiento consiste en realizar 10 preguntas, escogiendo aleatoriamente 1
 Al finalizar las 10 preguntas, el programa guardará el nombre del usuario y su puntuación en un archivo llamado classificacio.txt.
 
 
-## 🛠️Tecnologías
+## 🛠️ Tecnologías
 - IntelliJ IDEA Java 25 
 - Git & GitHub 
 
-🚀 Installation & Execution
+## 🚀 Installation & Execution
 
 Prerequisites
 
