@@ -1,71 +1,33 @@
 package main;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import model.FileLoader;
+import model.QuizGame;
+import model.ScoreWriter;
+
 import java.util.*;
 
 public class Main {
     static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        HashMap<String, String> cities = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
 
-        try {
-            File textFile = new File("countries.txt");
-            Scanner scReading = new Scanner(textFile);
+        FileLoader loader = new FileLoader();
+        QuizGame game = new QuizGame();
+        ScoreWriter writer = new ScoreWriter();
 
-            while (scReading.hasNextLine()) {
-                String line = scReading.nextLine();
-                String[] parts = line.split(" ");
+        Map<String, String> cities = loader.loadCountries("countries.txt");
 
-                if (parts.length == 2) {
-                    cities.put(parts[0].trim(), parts[1].trim());
-                }
-            }
+        System.out.println("Enter your name:");
+        String userName = scanner.nextLine();
 
-            scReading.close();
+        int score = game.play(scanner, cities);
 
-        } catch (FileNotFoundException e) {
-            System.out.println("Error archivo no encontrado -> " + e.getMessage());
-        }
+        System.out.println("\nGame finished.");
+        System.out.println("Your score: " + score + "/10");
 
-        String userName = "";
-        String userAnswer = "";
+        writer.saveScore("classificacio.txt", userName, score);
 
-        System.out.println("Escribe tu nombre");
-        userName = sc.nextLine();
-
-        List<String> countryNames = new ArrayList<>(cities.keySet());
-        Collections.shuffle(countryNames);
-
-        int score = 0;
-
-        for(int i = 0; i < 10 && i < countryNames.size(); i++){
-            String country = countryNames.get(i);
-            String correctCapital = cities.get(country);
-
-            System.out.println("Capital de " + country +  ": ");
-            userAnswer = sc.nextLine();
-
-            if(userAnswer.equalsIgnoreCase(correctCapital)){
-                score++;
-            }
-        }
-
-        System.out.println();
-        System.out.println("Juego terminado.");
-        System.out.println("Tu puntuación es : " + score + "/10");
-
-        try {
-            FileWriter writer = new FileWriter("classificacio.txt", true);
-            writer.write(userName + " - " + score + "\n");
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("Error " + e.getMessage());
-        }
-
+        scanner.close();
     }
 
 }

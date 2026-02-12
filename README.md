@@ -32,3 +32,16 @@ Al finalizar las 10 preguntas, el programa guardará el nombre del usuario y su 
 ## 🛠️Tecnologías
 - IntelliJ IDEA Java 25 
 - Git & GitHub 
+
+🚀 Installation & Execution
+
+Prerequisites
+
+- Ensure you have installed:
+- Java JDK 25 (or compatible version)
+- IntelliJ IDEA (or any Java IDE)
+- Git (optional, for cloning)
+
+Clone the Repository
+git clone https://github.com/Karel-Patricia/Task.S1.03.-Java-collections.git
+
