@@ -1,36 +1,49 @@
-# Tarea S1.03 - Java Collections
+# Task S1.03 - Java Collections
 
-**Objetivos**: 
-Crear y modificar colecciones con ArrayList, HashSet, HashMap,ListIterator
-Gestionar duplicados y comparar objetos
-Practicar ordenación de objetos (Comparable, Comparator)
-Practicar lectura y escritura de archivos
-Implementar menús e interacción con el usuario/a
+**Objectives**:
+Work with Java Collections Framework structures such as ArrayList, HashSet, HashMap, and ListIterator.
+Handle duplicates and object comparison.
+Practice object sorting (Comparable, Comparator).
+Practice file input/output operations.
+Implement menus and user interaction.
 
-## 📌 Nivel 1
+## 📌 Level 1
 
-### Ejercicio 1 – Duplicados
-Crea una clase llamada Monthcon un atributo name, que almacene el nombre del mes. Añade 11 objetos Montha un ArrayList, dejando fuera "Agosto". Inserta este mes en la posición correspondiente y comprueba que el orden de los meses es correcto.
-Convierte después el ArrayListen uno HashSety verifica que no se permiten duplicados.
-Por último, recorre la colección con un bucle fory con un Iterator.
+### Exercise 1 – Duplicates
+Create a class named Month with a name attribute that stores the month name.
+- Add 11 Month objects to an ArrayList, leaving out August
+- Insert August in the correct position
+- Verify that the month order is correct
+- Convert the ArrayList into a HashSet and verify that duplicates are not allowed
+- Iterate through the collection using:
+- A for loop
+- An Iterator
 
-### Ejercicio 2 – ListIterator
-Crea y rellena una List<Integer>.
-Crea una segunda lista e inserta los mismos elementos pero en orden inverso.
-Use uno ListIterator para leer los elementos de la primera y añadirlos a la segunda.
+### Exercise 2 – ListIterator
+- Create and populate a List<Integer>
+- Create a second list and insert the same elements in reverse order
+- Use a ListIterator to read elements from the first list and insert them into the second
 
-### Ejercicio 3 – Capital Game
-A partir del archivo  countries.txt (consulta el apartado de recursos), que contiene parejas de país y capital separadas por comas, el programa debe leer todos los datos y almacenarlos en un  HashMap<String, String>, donde la clave es el nombre del país y el valor, su capital.
+### Exercise 3 – Capital Game
+Using the file countries.txt (provided in resources), which contains country–capital pairs separated by commas:
+- Read the file contents
+- Store the data in a HashMap<String, String>
+	- Key → Country name
+	- Value → Capital city
 
-Una vez cargados los datos, el programa pedirá el nombre del usuario y empezará el juego.
+Game behavior:
+- The program asks for the user's name
+- The game generates 10 random questions
+- Each question displays a country name
+- The user must input the correct capital
+- Correct answers add 1 point
+- After 10 questions, the final score is displayed
+- The program saves the username and score into classificacio.txt
 
-El funcionamiento consiste en realizar 10 preguntas, escogiendo aleatoriamente 10 países diferentes del HashMap. En cada ronda, se mostrará el nombre de un país y el usuario deberá introducir el nombre de su capital. Si la respuesta es correcta (teniendo en cuenta mayúsculas y minúsculas si fuera necesario), se sumará un punto a su puntuación. Al término de las 10 preguntas, se mostrará la puntuación total obtenida.
 
-Al finalizar las 10 preguntas, el programa guardará el nombre del usuario y su puntuación en un archivo llamado classificacio.txt.
-
-
-## 🛠️ Tecnologías
-- IntelliJ IDEA Java 25 
+## 🛠️ Tecnologies
+- IntelliJ IDEA 
+- Java 25 
 - Git & GitHub 
 
 ## 🚀 Installation & Execution
